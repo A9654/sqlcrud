@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <div class="container">
+    <form action="/addstudent">
+        <h3>Add Student</h3>
+        <hr/>
+        <label for="name"><b>Student name</b></label>
+        <input type="text" placeholder="Enter name" name ="name" id="name" required />
+
+        <label for="phn"><b>Phone no.</b></label>
+        <input type="phone" placeholder="Enter phone number" name="phone" id="phone" required />
+
+        <label for="email-id"><b>Email Id</b></label>
+        <input type="email" placeholder="Enter email id" name="email" id="email" required />
+        
+        <div class="gender">
+         <strong>Gender</strong>
+         <input type="radio" name="gender" id="" value ="Male"/>Male 
+         <input type="radio" name="gender" id="" value="Female" />Female
+        </div>
+        <button type="submit" class="registerbtn">Add student</button>
+    
+    <a href="./" style="color:black"> BACK TO HOME PAGE</a>
+
+<!-- for showing the message of response query -->  
+  {{ #if mesg }}
+   <h3>DATA INSERTED</h3>
+   {{/if}}
+
+   {{#if checkmesg}}
+   <h3>Emailid or Phoneno already present</h3>
+   {{/if}}
+   
+    <br>
+    </form>
+ </div>
+    
+</body>
+</html>

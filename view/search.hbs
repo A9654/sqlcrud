@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <form action ="/searchstudent" method="post">
+  <h3>SEARCH STUDENT</h3>
+  <hr>
+
+  <label for="phn"><b>Phone no</b></label>
+  <input type ="phone" placeholder="type phone no to be searched" name="phone" id="phone" required>
+   <button type="submit" class="registerbtn">Search Student</button>
+   
+   <a href="./" style="color:black">Back TO HOME PAGE</a>
+   <br>
+   
+   {{#if mesg1}}
+   <h3>data found</h3>
+   {{/if}}
+
+   {{#if mesg2}}
+   <h3>Data not Found</h3>
+   {{/if}}
+    
+    
+    </form>
+</div>
+</body>
+</html>
